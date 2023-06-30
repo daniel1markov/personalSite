@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
-import ListGroup from "./components/ListGroup";
+// import ListGroup from "./components/ListGroup";
 
 function App() {
   // const items: string[] = [
@@ -25,13 +25,14 @@ function App() {
 
 
   const [alertVisible, setAlertVisibility] = useState(false);
+  
   return (
     <div>
       { alertVisible &&
         <Alert
-        children={"HGuyal"}
-        onClose={() => setAlertVisibility(false)}/>}
-      <Button color="primary" children="Hello mothafucka" onClick={() => setAlertVisibility(true)}/>
+          children={"HGuyal"}
+          onClose={() => setAlertVisibility(false)}/>}
+      <Button color="danger" children="Hello mothafucka" onClick={() => setAlertVisibility(true)}/>
     </div>
   );
 }
